@@ -18,7 +18,7 @@ public class ShowTiles : MonoBehaviour
         for(int i = 0;i< TileContainer.Tiles[index].Sprites.Length;i++)
         {
             GameObject tile = Instantiate(tilePrefab, transform.position, Quaternion.identity);
-            tile.transform.SetParent(parent.transform.GetChild(0).GetChild(0).GetChild(0).transform);
+            tile.transform.SetParent(parent.transform.GetChild(0).GetChild(0).transform);
             tile.GetComponent<Image>().sprite = TileContainer.Tiles[index].Sprites[i];
         }
     }
@@ -26,11 +26,11 @@ public class ShowTiles : MonoBehaviour
     public void ClearTileSet()
     {
         GameObject parent = transform.parent.gameObject;
-        var childs = parent.transform.GetChild(0).GetChild(0).GetChild(0).transform.childCount;
+        var childs = parent.transform.GetChild(0).GetChild(0).transform.childCount;
 
         for(int i = 0;i<childs;i++)
         {
-            DestroyImmediate(parent.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).gameObject);
+            DestroyImmediate(parent.transform.GetChild(0).GetChild(0).GetChild(0).gameObject);
         }
     }
 
