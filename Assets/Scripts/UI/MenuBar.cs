@@ -6,7 +6,7 @@ using UnityEngine;
 public class MenuBar : MonoBehaviour
 {
     [BoxGroup("Data")]
-    [SerializeField] GameObject data, dataBar;
+    [SerializeField] GameObject dataBar;
 
     private bool isOpen = false;
 

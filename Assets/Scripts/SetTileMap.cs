@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SetTileMap : MonoBehaviour
@@ -17,6 +18,10 @@ public class SetTileMap : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (TileCache.IndexNumber != 0 && originSprite != TileContainer.SpriteDic[TileCache.IndexNumber])
         {
             tileImage.sprite = TileContainer.SpriteDic[TileCache.IndexNumber];
@@ -33,6 +38,11 @@ public class SetTileMap : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (TileCache.IndexNumber != 0 && originSprite != TileContainer.SpriteDic[TileCache.IndexNumber])
         {
             tileImage.sprite = TileContainer.SpriteDic[TileCache.IndexNumber];
