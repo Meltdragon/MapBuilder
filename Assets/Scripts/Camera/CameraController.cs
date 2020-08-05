@@ -6,9 +6,9 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] float scrollSpeed, zoomSpeed, maxZoomIn, maxZoomOut,maxScrollBoundLeftX, maxScrollBoundRightX,maxScrollBoundUpY, maxScrollBoundDownY;
 
-    private float zoom = -50;
+    private float zoom = -136;
     
-    private float cameraPositionX = 0, cameraPositionY = 0;
+    private float cameraPositionX = -34, cameraPositionY = -60;
     private GameObject camera;
     
 
