@@ -20,6 +20,7 @@ public class ShowTiles : MonoBehaviour
             GameObject tile = Instantiate(tilePrefab, transform.position, Quaternion.identity);
             tile.transform.SetParent(parent.transform.GetChild(0).GetChild(0).transform);
             tile.GetComponent<Image>().sprite = TileContainer.Tiles[index].Sprites[i];
+            tile.transform.GetChild(0).GetComponent<Text>().text = TileContainer.Tiles[index].Sprites[i].name;
         }
     }
 
