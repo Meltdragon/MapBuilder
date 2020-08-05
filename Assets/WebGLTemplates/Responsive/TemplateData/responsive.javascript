@@ -1,7 +1,5 @@
 (function(){
-    console.log('Responsive WebGL Template by SIMMER.io v2019.02.08');
-    console.log('Available at: https://assetstore.unity.com/packages/tools/gui/responsive-webgl-template-117308 for free!');
-    console.log('Host your WebGL Game at SIMMER.io for free!');
+    
 
     const q = (selector) => document.querySelector(selector);
 
@@ -34,8 +32,9 @@
         gCanvasElement.style.width = 'auto';
         gCanvasElement.style.height = 'auto';
 
-        var fitW = Math.round(initialDimensions.width * scale * 100) / 100;
-        var fitH = Math.round(initialDimensions.height * scale * 100) / 100;
+        var fitH = window.innerHeight;
+        var fitW = window.innerWidth;
+        
 
         gCanvasElement.setAttribute('width', fitW);
         gCanvasElement.setAttribute('height', fitH);
